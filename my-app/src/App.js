@@ -21,10 +21,14 @@ function HelloWorld() {
 
 function App() {
   const logotipo = logo; 
+
+  const mostrarImagen = true;
+
   return (
     <>
     <div className="App">
       <header className="App-header">
+      {mostrarImagen && <span>Hola</span>}
         <img src={logotipo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -38,6 +42,14 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+          {/* Codigo react */}
+        {mostrarImagen ? <img src={logotipo} className="App-logo" alt="logo" /> 
+        : 'No Hay Imagen Para Mostrar'}
+        
+          {/* Codigo Vue */}
+        {/* <img v-if="mostrarImagen" src={logotipo} className="App-logo" alt="logo" /> */}
+    </div>
     </div>
     <HelloWorld />
     </>
