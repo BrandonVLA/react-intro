@@ -24,6 +24,13 @@ function App() {
 
   const mostrarImagen = true;
 
+  const contador = 5;
+
+  //si el contador es menor a 5,
+  // imprimir un mensaje "El contador es menor a 5"
+  //si el contador es mayor a 5,
+  // imprimir un mensaje "El contador es mayor a 5"
+  
   return (
     <>
     <div className="App">
@@ -50,6 +57,9 @@ function App() {
           {/* Codigo Vue */}
         {/* <img v-if="mostrarImagen" src={logotipo} className="App-logo" alt="logo" /> */}
     </div>
+      <div> 
+        {contador < 5? 'El contador es menor a 5 ' : 'El contador es mayor a 5'}
+      </div>
     </div>
     <HelloWorld />
     </>
