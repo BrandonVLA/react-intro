@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.contador-div {
+  background-color: grey;
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: auto 20px;
+  color: #fff;
+  border-radius: 20px;
+}

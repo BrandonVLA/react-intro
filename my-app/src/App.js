@@ -9,7 +9,7 @@ import './App.css';
 
 
 function HelloWorld() {
-    const nombre= "Brandon Daniel";
+    const nombre= "Brandon";
   return( 
       <div className="App App-header">
         <p>
@@ -24,7 +24,7 @@ function App() {
 
   const mostrarImagen = true;
 
-  const contador = 5;
+  const contador = 1;
 
   //si el contador es menor a 5,
   // imprimir un mensaje "El contador es menor a 5"
@@ -57,7 +57,7 @@ function App() {
           {/* Codigo Vue */}
         {/* <img v-if="mostrarImagen" src={logotipo} className="App-logo" alt="logo" /> */}
     </div>
-      <div> 
+      <div className="contador-div"> 
         {contador < 5? 'El contador es menor a 5 ' : 'El contador es mayor a 5'}
       </div>
     </div>
