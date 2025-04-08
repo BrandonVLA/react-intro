@@ -21,6 +21,20 @@ function HelloWorld() {
 
 const entrada = ['a','b','c'];
 
+const opcionesMenu = [ 
+   {id:1, texto:'Code ', link:'/Code', icono: '', isSelected: true
+}, {id:2, texto:'Issues ', link:'/Issues', icono: '', isSelected: false
+}, {id:3, texto:'Pull Request ', link:'/PullRequest', icono: '', isSelected: false
+}];
+
+const menu = opcionesMenu.map(elemento => {
+  return (
+    <div>
+    {elemento.texto}
+    </div>
+  );
+});
+
 const parrafos = entrada.map(elemento => {
     return (
       <div> 
@@ -83,7 +97,9 @@ function App() {
         }
       </div>
       <div>
-        {parrafos}
+        { parrafos }  
+        <h1>Estos son los elementos del menu</h1>
+        { menu }
       </div>
     </div>
     <HelloWorld />
