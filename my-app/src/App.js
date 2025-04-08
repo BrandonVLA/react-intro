@@ -19,6 +19,19 @@ function HelloWorld() {
   );
 }
 
+const entrada = ['a','b','c'];
+
+const parrafos = entrada.map(elemento => {
+    return (
+      <div> 
+        <h1>Estos son los elementos:</h1>
+        <p>{elemento}</p>
+      </div>
+      
+    )
+  });
+
+
 function App() {
   const logotipo = logo; 
 
@@ -58,7 +71,19 @@ function App() {
         {/* <img v-if="mostrarImagen" src={logotipo} className="App-logo" alt="logo" /> */}
     </div>
       <div className="contador-div"> 
-        {contador < 5? 'El contador es menor a 5 ' : 'El contador es mayor a 5'}
+        {/* if (contador < 5) {
+          alert('El contador es menor a 5'); */}
+        <h2>"Verificador de Mayor o Menor que"</h2>
+        {contador < 5? 
+          'El contador es menor a 5 ' : 'El contador es mayor a 5'
+        }
+        <br></br>
+        {contador === 5? 
+          'El contador es igual a 5': 'El contador no es igual a 5'
+        }
+      </div>
+      <div>
+        {parrafos}
       </div>
     </div>
     <HelloWorld />
