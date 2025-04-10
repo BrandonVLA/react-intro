@@ -85,7 +85,7 @@ function App() {
     setcontadorValor(contadorValor += 10);
   }
 
-  function incrementarContadormenosDiez() {
+  function decrementarContadormenosDiez() {
     setcontadorValor(contadorValor - 10);
   }
   return (
@@ -140,10 +140,10 @@ function App() {
       <div className="alineado">
         <h1>Contador de Clicks: {contadorValor}</h1>
         <div>
-          <button className="botonesAgregarClics" onClick={incrementarContador}>Incrementar</button>
           <button className="botonesAgregarClics" onClick={decrementarContador}>Decrementar</button>
-          <button className="botonesAgregarClics" onClick={incrementarContadorxDiez}>Incrementar x10</button>
-          <button className="botonesAgregarClics" onClick={incrementarContadormenosDiez}>Incrementar x-10</button>
+          <button className="botonesAgregarClics" onClick={decrementarContadormenosDiez}>Decrementar (-10)</button>
+          <button className="botonesAgregarClics" onClick={incrementarContador}>Incrementar</button>
+          <button className="botonesAgregarClics" onClick={incrementarContadorxDiez}>Incrementar (+10)</button>
         </div>
       </div>
     </>
