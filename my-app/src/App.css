@@ -69,3 +69,20 @@
 .navegacion-item .seleccionado {
   border-bottom: 2px solid red;
 }
+
+.alineado {
+  text-align: center;
+  background-color: #282c34;
+  color: #fff;
+  margin: 10px 10px;
+  padding: 20px;
+}
+
+.botonesAgregarClics {
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px;
+}
