@@ -19,8 +19,6 @@ function HelloWorld() {
 
 const entrada = ["a", "b", "c"];
 
-
-
 const parrafos = entrada.map((elemento) => {
   return (
     <div>
@@ -39,41 +37,37 @@ function App() {
 
   //--------------------------------------------Inicio-Ejercicio de Tarea---------------------------------------------------------
 
-const opcionesMenu = [
-  { id: 1, texto: "Code ", link: "/Code", icono: "", isSelected: true },
-  { id: 2, texto: "Issues ", link: "/issues", icono: "", isSelected: false },
-  {
-    id: 3,
-    texto: "Pull Request ",
-    link: "/pulls",
-    icono: "",
-    isSelected: false,
-  },
-];
+  const opcionesMenu = [
+    { id: 1, texto: "Code ", link: "/Code", icono: "", isSelected: true },
+    { id: 2, texto: "Issues ", link: "/issues", icono: "", isSelected: false },
+    { id: 3, texto: "Pull Request ", link: "/pulls", icono: "", isSelected: false, },
+  ];
 
-const [seleccionadoId, setSeleccionadoId] = useState(1); //paso #1 //Se usa useState(1) para marcar como predeterminado el id:1 de los objetos de arriba 
+  const [seleccionadoId, setSeleccionadoId] = useState(1); //paso #1 //Se usa useState(1) para marcar como predeterminado el id(en este caso el id #1) de los objetos de arriba
 
-const menu = opcionesMenu.map((elemento) => {
-  const isSelected = seleccionadoId === elemento.id; //paso #2 // se evalua si el seleccionadoId que es el valor actual del texto que esta seleccionado(al inicio es 1 por el useState) si es igual al elemento que esta siendo seleccioonado se marca como true, sino es false
+  const menu = opcionesMenu.map((elemento) => {
+    const isSelected = seleccionadoId === elemento.id; //paso #2 // se evalua si el seleccionadoId que es el valor actual del texto que esta seleccionado(al inicio es 1 por el useState) si es igual al elemento que esta siendo seleccioonado se marca como true, sino es false
 
-  return ( // se muestra a pantalla usando return y llamando la variable menu dentro del componente App()
-    <div
-      key={elemento.id}
-      onClick={() => setSeleccionadoId(elemento.id)} // cuando se da click a otro o al mismo texto(boton), cambia o mantiene el nuevo id del elemento aplicando los estilos de abajo
-      style={{
-        cursor: "pointer",
-        fontWeight: isSelected ? "bold" : "normal",
-        color: isSelected ? "blue" : "black",
-      }}
-    >
-      <p>
-        {elemento.texto}
-        {isSelected && <b>*</b>}
-      </p>
-    </div>
-  );
-});
-//--------------------------------------------Fin-Ejercicio de Tarea---------------------------------------------------------
+    return (
+      // se muestra a pantalla usando return y llamando la variable menu dentro del componente App()
+      <div
+        key={elemento.id} 
+        onClick={() => setSeleccionadoId(elemento.id)}  // cuando se da click a otro o al mismo texto(boton), cambia o mantiene el nuevo id del elemento aplicando los estilos de abajo
+        style={{
+          cursor: "pointer",
+          fontWeight: isSelected ? "bold" : "normal",
+          color: isSelected ? "blue" : "black",
+        }}
+      >
+        <a href={`#${elemento.link}`}>
+          {elemento.texto}
+          {isSelected && <b>*</b>}
+          {elemento.link}
+        </a>
+      </div>
+    );
+  });
+  //--------------------------------------------Fin-Ejercicio de Tarea---------------------------------------------------------
 
   //si el contador es menor a 5,
   // imprimir un mensaje "El contador es menor a 5"
